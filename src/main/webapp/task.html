@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style>
+        .form-container {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-container input {
+            width: calc(100% - 22px);
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Login Form</h1>
+    <div class="form-container">
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = 'dashboard.html'; // Redirect to dashboard page
+        });
+    </script>
+</body>
+</html>
